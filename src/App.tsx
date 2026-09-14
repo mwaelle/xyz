@@ -7,7 +7,8 @@ import TweetsList from './components/TweetsList'
 function App() {
     return (
       <>
-        <p>Nombre de tweets : {tweets.length}</p>
+        <h1>XYZ</h1>
+        <p>{tweets.length} tweets</p>
         <TweetsList
           tweets = {tweets}
         />
