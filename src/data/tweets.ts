@@ -78,7 +78,7 @@ export const tweets : Array<Tweet> = [
     },
     {
         id : "b5e2c8a1-4d67-43f9-91ab-6e3c7d0f8254",
-        authorName : "Ellya ",
+        authorName : "Ellya Forger",
         authorHandle : "Zelda4Life",
         content : "Je viens de recommencer Zelda Twilight Princess et je sais déjà que je vais y passer beaucoup trop d'heures",
         createdAt : "2026-09-11T20:47:00.000Z"

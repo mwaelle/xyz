@@ -1,10 +1,10 @@
 import './App.css'
 
 import { tweets } from './data/tweets' 
-import TweetsList from './components/TweetsList'
+import { TweetsList } from './components/TweetsList'
 
 
-function App() {
+function App() { //contenu de la page
     return (
       <>
         <h1>XYZ</h1>

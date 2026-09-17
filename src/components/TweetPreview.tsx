@@ -1,15 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import type { Tweet } from "../types/Tweet";
 
 type TweetPreviewProps = {
     tweet : Tweet
 }
 
-function TweetPreview({tweet} : TweetPreviewProps) : React.JSX.Element {
-    const date = new Date(tweet.createdAt);
+export function TweetPreview({tweet} : TweetPreviewProps) : React.JSX.Element {
+    const date = new Date(tweet.createdAt); //avoir la date dans un format compréhensible
 
-    const [isExpanded, setIsExpanded] = useState(false); //variable d'état qui stocke si le contenu est affiché entièrement ou non
-    const newContent = isExpanded ? tweet.content : tweet.content.substring(0, 180) + (tweet.content.length > 180 ? "..." : "");; //contenu affiché (tout si <= 180 caractères, sinon 180 caractères et ...)
+    const [isExpanded, setIsExpanded] = useState(false); //variable d'état qui stocke si le contenu est affiché entièrement ou non et une fonction pour mettre à jour la variable
+    const newContent = isExpanded ? tweet.content : tweet.content.substring(0, 180) + (tweet.content.length > 180 ? "..." : ""); //contenu affiché (tout si <= 180 caractères, sinon 180 caractères et ...)
 
     return (
         <div> 
@@ -27,5 +27,3 @@ function TweetPreview({tweet} : TweetPreviewProps) : React.JSX.Element {
         </div> //balise Fragment pour grouper des éléments sans laisser de trace
     );
 }
-
-export default TweetPreview
