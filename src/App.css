@@ -183,8 +183,52 @@
   }
 }
 
-.img {
+
+/* Mes modifications */
+
+div { /* concerne tout le contenu de ma page App */
+  text-align: left;
+  padding: 20px 20px;
+}
+
+.tweet-number { /* concerne le nombre de tweets */
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #303238;
+}
+
+.tweet-preview { /* concerne chaque tweet */
+  padding: 20px 0;
+  border-bottom: 1px solid #303238;
+}
+
+.tweet-header { /* concerne l'en-tête de chaque tweet */ 
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.tweet-header b { /* concerne le nom de l'auteur de chaque tweet */ 
+  font-size: 17px;
+  color: white;
+}
+
+.img { /* concerne les images associées aux tweets */
   max-height: 300px;
   object-fit: contain;
   border-radius: 5%;
+  margin-bottom: 3px;
+}
+
+.button { /* concerne le bouton pour étendre */
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #c084fc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover { /* quand la souris passe sur le bouton */
+    text-decoration: underline;
 }

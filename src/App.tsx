@@ -6,13 +6,11 @@ import { TweetsList } from './components/TweetsList'
 
 function App() { //contenu de la page
     return (
-      <>
+      <div>
         <h1>XYZ</h1>
-        <p>{tweets.length} tweets</p>
-        <TweetsList
-          tweets = {tweets}
-        />
-      </>
+        <p className='tweet-number'>{tweets.length} tweets</p>
+        <TweetsList tweets = {tweets}/>
+      </div>
     )
 }
 
