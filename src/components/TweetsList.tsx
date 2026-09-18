@@ -15,5 +15,5 @@ export function TweetsList({tweets} : TweetsListProps) {
                 />
             ))}
         </div>
-    );
+    )
 }

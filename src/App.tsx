@@ -5,12 +5,16 @@ import { TweetsList } from './components/TweetsList'
 
 
 function App() { //contenu de la page
+  const tweetsTries = [...tweets].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+
     return (
-      <div>
+
+      <div className='app'>
         <h1>XYZ</h1>
         <p className='tweet-number'>{tweets.length} tweets</p>
-        <TweetsList tweets = {tweets}/>
+        <TweetsList tweets = {tweetsTries}/>
       </div>
+      
     )
 }
 

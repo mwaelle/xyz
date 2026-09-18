@@ -5,7 +5,7 @@ export const tweets : Array<Tweet> = [
         id : "550e8400-e29b-41d4-a716-446655440000",
         authorName : "Maëlle Montauban",
         authorHandle : "mwaelle",
-        content : "J'ai enfin terminé mon projet de programmation, je suis tellement soulagée !!!",
+        content : "J'ai terminé mon projet de programmation, je suis tellement fière !!!",
         createdAt : "2026-09-14T09:15:00.000Z"
     },
     {
@@ -30,7 +30,7 @@ export const tweets : Array<Tweet> = [
         id : "6ba7b810-9dad-41d1-80b4-00c04fd430c8",
         authorName : "Ewenn Montauban",
         authorHandle : "ewenn18",
-        content : "Aujourd'hui j'ai décidé de prendre un peu de temps pour moi. Entre les cours, les devoirs, les projets et toutes les petites choses du quotidien, on oublie parfois de faire une pause et de simplement profiter du moment présent.",
+        content : "Bientôt le retour d'Amélia !! Vrm en Octobre je disparaîs et me parlez pas d'Outlast vous allez être trauma tellement je suis taré et que je peux en parler pendant 3 heures (rest in peace Nathan, il en a fait les frais)",
         createdAt : "2026-09-13T16:20:00.000Z"
     },
     {
@@ -44,14 +44,14 @@ export const tweets : Array<Tweet> = [
         id : "3d6f0a92-8b4e-4c71-a5f3-2d9e6b7c1a08",
         authorName : "Elise Antoine",
         authorHandle : "elisa",
-        content : "J'ai découvert une nouvelle playlist et elle va clairement tourner en boucle toute la semaine",
+        content : "Let's go au taïso :)",
         createdAt : "2026-09-13T14:37:00.000Z"
     },
     {
         id : "a12b34c5-d678-49ef-8012-3456789abcde",
         authorName : "Amandine Goujon",
         authorHandle : "troBi1leGP",
-        content : "Petit souvenir",
+        content : "Petit souvenir...",
         image : {
             url : "https://api.lemans.org/media/cache/api_news_large/assets/fileuploads/68/21/6821b64c10557.jpg",
             alt : "Une affiche du GP Explorer 3"
@@ -62,7 +62,7 @@ export const tweets : Array<Tweet> = [
         id : "e7f6d5c4-b3a2-4198-8765-43210fedcba9",
         authorName : "Titouan Hauchard",
         authorHandle : "JTMsqeezy",
-        content : "Incroyable la dernière vidéo de Squeezie (en toute objectivité bien sûr)",
+        content : "Incroyable la dernière vidéo de Squeezie (en toute objectivité bien sûr) ;)",
         createdAt : "2026-09-12T22:30:00.000Z"
     },
     {
@@ -80,7 +80,7 @@ export const tweets : Array<Tweet> = [
         id : "b5e2c8a1-4d67-43f9-91ab-6e3c7d0f8254",
         authorName : "Ellya Forger",
         authorHandle : "Zelda4Life",
-        content : "Je viens de recommencer Zelda Twilight Princess et je sais déjà que je vais y passer beaucoup trop d'heures",
+        content : "Je viens de recommencer Zelda Twilight Princess et je sais déjà que je vais y passer beaucoup trop de temps hehe",
         createdAt : "2026-09-11T20:47:00.000Z"
     }
 ]

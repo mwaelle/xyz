@@ -186,9 +186,9 @@
 
 /* Mes modifications */
 
-div { /* concerne tout le contenu de ma page App */
+.app { /* concerne tout le contenu de ma page App */
   text-align: left;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .tweet-number { /* concerne le nombre de tweets */
@@ -198,8 +198,24 @@ div { /* concerne tout le contenu de ma page App */
 }
 
 .tweet-preview { /* concerne chaque tweet */
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 0 20px 60px;
   border-bottom: 1px solid #303238;
+}
+
+.avatar { /* concerne le profil avec les initiales */
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: darkorchid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  color: white;
 }
 
 .tweet-header { /* concerne l'en-tête de chaque tweet */ 
