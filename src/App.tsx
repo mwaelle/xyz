@@ -1,13 +1,15 @@
 import './App.css'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 
 function App() { //contenu de la page
     return (
 
       <div className='app'>
-        <header>
+        <header className='header'>
           <h1>XYZ</h1>
+          <Link className="tweet-link-header" to={`/`}>Accueil</Link> 
+          <Link className="tweet-link-header" to={`/a-propos`}>A propos</Link>
         </header>
         <main>
           <Outlet/>

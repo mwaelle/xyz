@@ -14,8 +14,10 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/" element={<App/>}>
       <Route index element={<TweetsMasterPage/>} />
       <Route path="tweets/:id" element={<TweetDetailsPage/>} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage/>} />
       </Route>
     </Routes>
   </BrowserRouter>,
 )
+
+//<Route path="a-propos" element={Apropos} />

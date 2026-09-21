@@ -191,10 +191,19 @@
   padding: 20px;
 }
 
+.header {
+  border-bottom: 1px solid #303238;
+}
+
+.tweet-link-header {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
 .tweet-number { /* concerne le nombre de tweets */
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid #303238;
+  padding-top: 10px;
 }
 
 .tweet-preview { /* concerne chaque tweet */
@@ -252,5 +261,10 @@
 .tweet-link {
   display: block;
   color: #c084fc;
+  margin-top: 15px;
+}
+
+
+.no-response {
   margin-top: 15px;
 }

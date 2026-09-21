@@ -14,10 +14,14 @@ export function TweetDetailsPage() {
                 <TweetPreview 
                     key = {tweet.id}
                     tweet = {tweet}
+                    linkToDetail = {false}
                 />
             )}
-            {tweetsResponse && (
+            {tweetsResponse.length !== 0 && (
                 <TweetsList tweets={tweetsResponse}/>
+            )}
+            {tweetsResponse.length === 0 && (
+                <p className="no-response">Aucune réponse pour le moment.</p>
             )}
         </>
     )
