@@ -1,16 +1,15 @@
 import type { Tweet } from "../types/Tweet"
 import { TweetPreview } from "./TweetPreview";
-import { useParams } from "react-router-dom";
 
 
 type TweetsListProps = {
     tweets : Array<Tweet>
+    linkToDetail? : boolean
 }
 
-export function TweetsList({tweets} : TweetsListProps) {
-    const { id } = useParams<{id : string}>()
+export function TweetsList({tweets, linkToDetail = true} : TweetsListProps) {
     let tweetsAffiche = tweets
-    if (!id) {
+    if (linkToDetail) {
         tweetsAffiche = tweets.filter((tweet) => tweet.parentId === undefined) //récupère les tweets de premier niveau
     }
     return (

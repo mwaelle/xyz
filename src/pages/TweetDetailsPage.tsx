@@ -18,7 +18,10 @@ export function TweetDetailsPage() {
                 />
             )}
             {tweetsResponse.length !== 0 && (
-                <TweetsList tweets={tweetsResponse}/>
+                <TweetsList 
+                    tweets = {tweetsResponse}
+                    linkToDetail = {false}
+                />
             )}
             {tweetsResponse.length === 0 && (
                 <p className="no-response">Aucune réponse pour le moment.</p>

@@ -10,7 +10,12 @@ type TweetPreviewProps = {
 }
 
 export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) : React.JSX.Element {
-    const date = new Date(tweet.createdAt); //avoir la date dans un format compréhensible
+    const date = new Date(tweet.createdAt).toLocaleString('fr-FR'); //avoir la date dans un format compréhensible
+    const jour = date.substring(0, 2) //récupère le jour
+    const moisNb = date.substring(3, 5) //récupère le mois en nombre
+    const annee = date.substring(6, 10) //récupère l'année
+    const heures = date.substring(11, 13) //récupère les heures
+    const minutes = date.substring(14, 16) //récupère les minutes
 
     const [isExpanded, setIsExpanded] = useState(false); //variable d'état qui stocke si le contenu est affiché entièrement ou non et une fonction pour mettre à jour la variable
     const newContent = isExpanded ? tweet.content : tweet.content.substring(0, 180) + (tweet.content.length > 180 ? "..." : ""); //contenu affiché (tout si <= 180 caractères, sinon 180 caractères et ...)
@@ -19,10 +24,10 @@ export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) :
         <div className="tweet-preview"> 
             <Avatar authorName = {tweet.authorName}/>
             <div>
-                <p className="tweet-header"><b>{tweet.authorName}</b> @{tweet.authorHandle} {date.toLocaleString('fr-FR')}</p>
+                <p className="tweet-header"><b>{tweet.authorName}</b> @{tweet.authorHandle} {jour} {mois(moisNb)} {annee} à {heures}:{minutes}</p>
 
                 {tweet.image && ( //vérifie si l'image est présente et l'affiche si c'est le cas
-                    linkToDetail ? (
+                    linkToDetail ? ( //si on est pas sur la page de détail, l'image est cliquable
                         <Link className="tweet-link" to={`/tweets/${tweet.id}/`}>
                             <img src={tweet.image.url} alt={tweet.image.alt} className="img"/>
                         </Link>
@@ -38,9 +43,39 @@ export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) :
                     <button className="button" onClick={() => setIsExpanded((isExpanded) => !isExpanded) }>{isExpanded ? "Voir moins" : "Voir plus"}</button>
                 )}
             </div>
-            {(linkToDetail) && ( 
+            {(linkToDetail) && ( //si on est pas sur la page de détail du tweet, on a un lien vers la discussion
                 <Link className="tweet-link" to={`/tweets/${tweet.id}/`}>Voir la discussion</Link>
             )}
         </div> //balise pour grouper des éléments sans laisser de trace
     )
 }
+
+
+function mois(moisNb : string) : string { //fonction qui retourne le mois en toutes lettres 
+        switch(moisNb) {
+            case "01" :
+                return "janvier"
+            case "02" :
+                return "février"
+            case "03" :
+                return "mars"
+            case "04" :
+                return "avril"
+            case "05" :
+                return "mai"
+            case "06" :
+                return "juin"
+            case "07" :
+                return "juillet"
+            case "08" :
+                return "août"
+            case "09" :
+                return "septembre"
+            case "10" :
+                return "octobre"
+            case "11" :
+                return "novembre"
+            default :
+                return "décembre"
+        }
+    }
