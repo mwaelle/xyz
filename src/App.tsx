@@ -1,18 +1,17 @@
 import './App.css'
-
-import { tweets } from './data/tweets' 
-import { TweetsList } from './components/TweetsList'
+import { Outlet } from 'react-router-dom';
 
 
 function App() { //contenu de la page
-  const tweetsTries = [...tweets].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-
     return (
 
       <div className='app'>
-        <h1>XYZ</h1>
-        <p className='tweet-number'>{tweets.length} tweets</p>
-        <TweetsList tweets = {tweetsTries}/>
+        <header>
+          <h1>XYZ</h1>
+        </header>
+        <main>
+          <Outlet/>
+        </main>
       </div>
       
     )

@@ -82,6 +82,22 @@ export const tweets : Array<Tweet> = [
         authorHandle : "Zelda4Life",
         content : "Je viens de recommencer Zelda Twilight Princess et je sais déjà que je vais y passer beaucoup trop de temps hehe",
         createdAt : "2026-09-11T20:47:00.000Z"
+    },
+    {
+        id : "b5e2c8a1-4d67-43f9-91ab-6e3c7d0f9411",
+        authorName : "Maëlle Montauban",
+        authorHandle : "mwaelle",
+        content : "OHHHH INCROYABLE ! Je suis trop contente pour toi !!",
+        createdAt : "2026-09-12T13:00:00.000Z",
+        parentId : "28f4a6b9-7c31-45de-b852-0a9f6c3d1e74"
+    },
+    {
+        id : "b5e2c8a1-4d67-43f9-91ab-6e3c7d0f0000",
+        authorName : "Maëlle Montauban",
+        authorHandle : "mwaelle",
+        content : "Ca me manque tellement...",
+        createdAt : "2026-09-12T20:20:00.000Z",
+        parentId : "a12b34c5-d678-49ef-8012-3456789abcde"
     }
 ]
 

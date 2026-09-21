@@ -246,5 +246,11 @@
 }
 
 .button:hover { /* quand la souris passe sur le bouton */
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.tweet-link {
+  display: block;
+  color: #c084fc;
+  margin-top: 15px;
 }

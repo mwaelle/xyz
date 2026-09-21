@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import type { Tweet } from "../types/Tweet";
 import { Avatar } from "./Avatar";
+import { Link } from "react-router-dom";
 
 type TweetPreviewProps = {
     tweet : Tweet
@@ -19,7 +20,9 @@ export function TweetPreview({tweet} : TweetPreviewProps) : React.JSX.Element {
                 <p className="tweet-header"><b>{tweet.authorName}</b> @{tweet.authorHandle} {date.toLocaleString('fr-FR')}</p>
 
                 {tweet.image && ( //vérifie si l'image est présente et l'affiche si c'est le cas
-                    <img src={tweet.image.url} alt={tweet.image.alt} className="img"/>
+                    <Link className="tweet-link" to={`/tweets:${tweet.id}/`}>
+                        <img src={tweet.image.url} alt={tweet.image.alt} className="img"/>
+                    </Link>
                 )}
 
                 <p>{newContent}</p>
@@ -28,6 +31,7 @@ export function TweetPreview({tweet} : TweetPreviewProps) : React.JSX.Element {
                     <button className="button" onClick={() => setIsExpanded((isExpanded) => !isExpanded) }>{isExpanded ? "Voir moins" : "Voir plus"}</button>
                 )}
             </div>
+            <Link className="tweet-link" to={`/tweets/${tweet.id}/`}>Voir la discussion</Link>
         </div> //balise pour grouper des éléments sans laisser de trace
     )
 }
