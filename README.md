@@ -25,3 +25,12 @@ Retour TD1 :
         - exemples et explications pour les nouveaux apprentissages 
         - vérification du code écrit (confirmation du respect de la consigne)
         - recherche de la cause d'une erreur
+
+
+Retour TD2 :
+
+    - difficultés rencontrées :
+    - solutions appliquées :
+    - nouveaux apprentissages effectués :
+    - bonus réalisés :
+    - déclaration d'usage de l'IA :
