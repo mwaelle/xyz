@@ -9,7 +9,7 @@ type TweetPreviewProps = {
      linkToDetail? : boolean
 }
 
-export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) : React.JSX.Element {
+export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) : React.JSX.Element { //affichage du tweet
     const date = new Date(tweet.createdAt).toLocaleString('fr-FR'); //avoir la date dans un format compréhensible
     const jour = date.substring(0, 2) //récupère le jour
     const moisNb = date.substring(3, 5) //récupère le mois en nombre

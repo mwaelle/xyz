@@ -1,4 +1,4 @@
-export function AboutPage() {
+export function AboutPage() { //page A propos
     return (
         <>
         </>

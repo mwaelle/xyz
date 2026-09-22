@@ -195,10 +195,11 @@
   border-bottom: 1px solid #303238;
 }
 
-.tweet-link-header {
+.tweet-link-header { /* concerne les liens dans l'en-tête */
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
+  color: #c084fc;
   display: inline-block;
 }
 
@@ -258,18 +259,22 @@
   text-decoration: underline;
 }
 
-.tweet-link {
+.tweet-link { /* concerne les liens dans le tweet */
   display: block;
   color: #c084fc;
   margin-top: 15px;
 }
 
-.fil-ariane {
+.fil-ariane { /* concerne le fil d'Ariane */
   display: block;
   margin-top: 15px;
   margin-left: 10px;
 }
 
-.no-response {
+.fil-ariane a { /* concerne les liens dans le fil d'Ariane */
+  color: #c084fc;
+}
+
+.no-response { /* concerne les éléments indiquant qu'il n'y a pas de réponse */
   margin-top: 15px;
 }

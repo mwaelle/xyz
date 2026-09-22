@@ -6,16 +6,16 @@ import { TweetsList } from "../components/TweetsList"
 import type { Tweet } from "../types/Tweet"
 
 
-export function TweetDetailsPage() {
-    const { id } = useParams<{id : string}>()
-    const tweet = tweets.find((tweet) => tweet.id === id)
-    const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id)
+export function TweetDetailsPage() { //page de détail d'un tweet
+    const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
+    const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
+    const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
 
     return (
         <>
             <div className="fil-ariane">
                 <Link to={`/`}>Accueil</Link>
-                {getAncetres(tweet).map((ancetre) => (
+                {getAncetres(tweet).map((ancetre) => ( //crée le fil d'Ariane à partir du tableau d'ancêtres
                     <>
                         {" / "}
                         <Link to={`/tweets/${ancetre.id}`}>
@@ -26,7 +26,7 @@ export function TweetDetailsPage() {
                 {" / "} Tweet de {tweet?.authorName}
             </div>
 
-            {tweet && (
+            {tweet && ( //affiche le tweet de la page
                 <TweetPreview 
                     key = {tweet.id}
                     tweet = {tweet}
@@ -34,27 +34,27 @@ export function TweetDetailsPage() {
                 />
             )}
 
-            {tweetsResponse.length !== 0 && (
+            {tweetsResponse.length !== 0 && ( //affiche les réponses au tweet
                 <TweetsList 
                     tweets = {tweetsResponse}
                     linkToDetail = {false}
                 />
             )}
-            {tweetsResponse.length === 0 && (
+            {tweetsResponse.length === 0 && ( //affiche le fait qu'il n'y ai pas de réponse
                 <p className="no-response">Aucune réponse pour le moment.</p>
             )}
         </>
     )
 }
 
-function getAncetres(tweet : Tweet | undefined) : Tweet[] {
+function getAncetres(tweet : Tweet | undefined) : Tweet[] { //fonction permettant de récupérer un tableau avec le fil d'Ariane d'un tweet
     const ancetres : Tweet[] = []
     let tweetActuel = tweet
 
-    while (tweetActuel?.parentId) {
+    while (tweetActuel?.parentId) { //tant que le tweet a un parent
         const parent = tweets.find((tweet) => tweet.id === tweetActuel!.parentId)
         if (parent) {
-            ancetres.unshift(parent)
+            ancetres.unshift(parent) //ajoute le parent au début du tableau
             tweetActuel = parent
         }
     }

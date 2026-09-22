@@ -10,7 +10,7 @@ const getInitiales = (name : string) : string => { //fonction permettant de réc
     return "X"
 }
 
-export function Avatar({authorName} : AvatarProps) {
+export function Avatar({authorName} : AvatarProps) { //avatar avec les initiales
     return (
         <div className="avatar">{getInitiales(authorName)}</div>
     )

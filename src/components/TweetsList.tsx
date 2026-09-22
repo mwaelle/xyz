@@ -7,9 +7,9 @@ type TweetsListProps = {
     linkToDetail? : boolean
 }
 
-export function TweetsList({tweets, linkToDetail = true} : TweetsListProps) {
+export function TweetsList({tweets, linkToDetail = true} : TweetsListProps) { //liste des tweets
     let tweetsAffiche = tweets
-    if (linkToDetail) {
+    if (linkToDetail) { //si on veut uniquement les tweets de premier niveau
         tweetsAffiche = tweets.filter((tweet) => tweet.parentId === undefined) //récupère les tweets de premier niveau
     }
     return (

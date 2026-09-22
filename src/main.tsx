@@ -9,7 +9,7 @@ import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { AboutPage } from './pages/AboutPage.tsx'
 
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')!).render( //routes
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}>
