@@ -29,8 +29,15 @@ Retour TD1 :
 
 Retour TD2 :
 
-    - difficultés rencontrées :
-    - solutions appliquées :
-    - nouveaux apprentissages effectués :
-    - bonus réalisés :
+    - difficultés rencontrées : apprendre à utiliser Outlet et les routes, trouver les bonnes propriétés CSS, apprendre à utiliser les Link, création du fil d'Ariane quand le tweet est un tweet de réponse
+
+    - solutions appliquées : utilisation du cours, de MDN Web Docs et recherche d'exemples et d'explications sur Internet et par l'IA
+
+    - nouveaux apprentissages effectués : Outlet et routes, Link
+
+    - bonus réalisés : ajouter la route statique /a-propos, ajouter les liens dans le header, ajouter le fil d'Ariane
+
     - déclaration d'usage de l'IA :
+        - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
+        - vérification du code écrit (confirmation du respect de la consigne)
+        - exemples et explications pour la création du fil d'Ariane
