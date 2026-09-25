@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { tweets } from "../data/tweets"
+import { useContext } from 'react';
+
 import { TweetPreview } from "../components/TweetPreview"
 import { TweetsList } from "../components/TweetsList"
 import type { Tweet } from "../types/Tweet"
+import { TweetsContext } from '../contexts/TweetsContext';
 
 
 export function TweetDetailsPage() { //page de détail d'un tweet
+    const { tweets } = useContext(TweetsContext)!;
     const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
     const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
@@ -48,6 +51,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
 }
 
 function getAncetres(tweet : Tweet | undefined) : Tweet[] { //fonction permettant de récupérer un tableau avec le fil d'Ariane d'un tweet
+    const { tweets } = useContext(TweetsContext)!;
     const ancetres : Tweet[] = []
     let tweetActuel = tweet
 
