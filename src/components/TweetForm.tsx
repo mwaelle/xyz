@@ -19,12 +19,15 @@ export function TweetForm({onSubmit} : TweetFormProps) : React.JSX.Element {
 
     return (
         <form onSubmit={handleSubmit}>
-            <textarea
+            <textarea className="form-textarea"
                 value={content}
                 onChange={(event) => setContent(event.target.value)}
+                placeholder="Quoi de neuf ?"
             />
-            <p>{CONTENT_MAX_LENGTH - content.length} caractères restants</p>
-            <button type = "submit" disabled = {content.trim() === "" || content.length > CONTENT_MAX_LENGTH}>Publier</button>
+            <div className="form-foot">
+                <p className="form-caracteres">{CONTENT_MAX_LENGTH - content.length} caractères restants</p>
+                <button className="form-button" type = "submit" disabled = {content.trim() === "" || content.length > CONTENT_MAX_LENGTH}>Publier</button>
+            </div>
         </form>
     )
 }
