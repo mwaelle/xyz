@@ -43,9 +43,12 @@ function App() { //contenu de la page
 
       <div className='app'>
         <header className='header'>
-          <h1>XYZ</h1>
-          <Link className="tweet-link-header" to={`/`}>Accueil</Link> 
-          <Link className="tweet-link-header" to={`/a-propos`}>A propos</Link>
+          <div>
+            <img src='/favicon-32x32.png' alt='logo de XYZ'/>
+            <p className='title'>XYZ</p>
+          </div>
+            <Link className="tweet-link-header" to={`/`}>Accueil</Link> 
+            <Link className="tweet-link-header" to={`/a-propos`}>A propos</Link>
         </header>
         <TweetsContext.Provider value={context}>
           <Outlet/>
