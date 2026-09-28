@@ -12,8 +12,7 @@ function App() { //contenu de la page
 
     const [lesTweets, setTweets] = useState<Array<Tweet>>(tweets);
 
-    const addTweet = (content : string) : void => {
-
+    function addTweet(content : string) : void {
       const newTweet : Tweet = {
         id : crypto.randomUUID(),
         authorName : "Vous",
@@ -23,11 +22,21 @@ function App() { //contenu de la page
         likes : 0,
         likedByMe : false
       }
-
       setTweets((lesTweets) => [newTweet, ...lesTweets])
     }
+
+    function toggleLike(id : string) : void {
+      setTweets((lesTweets) => 
+        lesTweets.map((tweet) => 
+          tweet.id === id
+            ? {...tweet, 
+              likes : tweet.likedByMe ? tweet.likes - 1 : tweet.likes + 1, 
+              likedByMe : !tweet.likedByMe}
+            : tweet
+      ))
+    }
     
-    const context: TweetsContextValue = { tweets : lesTweets, addTweet : addTweet };
+    const context: TweetsContextValue = { tweets : lesTweets, addTweet : addTweet, toggleLike : toggleLike };
 
 
     return (

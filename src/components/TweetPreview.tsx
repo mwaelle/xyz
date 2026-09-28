@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 
 type TweetPreviewProps = {
     tweet : Tweet
-     linkToDetail? : boolean
+    linkToDetail? : boolean
+    onToggleLike : (id : string) => void
 }
 
-export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) : React.JSX.Element { //affichage du tweet
+export function TweetPreview({tweet, linkToDetail = true, onToggleLike} : TweetPreviewProps) : React.JSX.Element { //affichage du tweet
     const date = new Date(tweet.createdAt).toLocaleString('fr-FR'); //avoir la date dans un format compréhensible
     const jour = date.substring(0, 2) //récupère le jour
     const moisNb = date.substring(3, 5) //récupère le mois en nombre
@@ -42,6 +43,8 @@ export function TweetPreview({tweet, linkToDetail = true} : TweetPreviewProps) :
                 {tweet.content.length > 180 && ( //si le contenu est > 180 caractères, le bouton pour étendre est créé et le texte affiché change en fonction de l'état du contenu
                     <button className="button" onClick={() => setIsExpanded((isExpanded) => !isExpanded) }>{isExpanded ? "Voir moins" : "Voir plus"}</button>
                 )}
+
+                <button className={tweet.likedByMe ? "button-like" : "button-unlike"} onClick={() => onToggleLike(tweet.id)}>{tweet.likedByMe ? "Je n'aime plus (" + tweet.likes + ")" : "J'aime ("  + tweet.likes + ")"}</button>
             </div>
             {(linkToDetail) && ( //si on est pas sur la page de détail du tweet, on a un lien vers la discussion
                 <Link className="tweet-link" to={`/tweets/${tweet.id}/`}>Voir la discussion</Link>

@@ -9,10 +9,19 @@ import { TweetsContext } from '../contexts/TweetsContext';
 
 
 export function TweetDetailsPage() { //page de détail d'un tweet
-    const { tweets } = useContext(TweetsContext)!;
+    const { tweets, toggleLike } = useContext(TweetsContext)!;
     const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
     const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
+
+    if (!tweet) {
+        return (
+            <>
+                <p className="no-response">Ce tweet n'existe pas</p>
+                <Link to={`/`}>Retour à l'accueil</Link>
+            </> 
+        )
+    }
 
     return (
         <>
@@ -34,6 +43,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
                     key = {tweet.id}
                     tweet = {tweet}
                     linkToDetail = {false}
+                    onToggleLike = {toggleLike}
                 />
             )}
 
@@ -41,6 +51,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
                 <TweetsList 
                     tweets = {tweetsResponse}
                     linkToDetail = {false}
+                    onToggleLike = {toggleLike}
                 />
             )}
             {tweetsResponse.length === 0 && ( //affiche le fait qu'il n'y ai pas de réponse

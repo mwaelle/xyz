@@ -5,9 +5,10 @@ import { TweetPreview } from "./TweetPreview";
 type TweetsListProps = {
     tweets : Array<Tweet>
     linkToDetail? : boolean
+    onToggleLike : (id : string) => void
 }
 
-export function TweetsList({tweets, linkToDetail = true} : TweetsListProps) { //liste des tweets
+export function TweetsList({tweets, linkToDetail = true, onToggleLike} : TweetsListProps) { //liste des tweets
     let tweetsAffiche = tweets
     if (linkToDetail) { //si on veut uniquement les tweets de premier niveau
         tweetsAffiche = tweets.filter((tweet) => tweet.parentId === undefined) //récupère les tweets de premier niveau
@@ -18,6 +19,7 @@ export function TweetsList({tweets, linkToDetail = true} : TweetsListProps) { //
                 <TweetPreview
                     key = {tweet.id} //identifiant stable, qui vise toujours le même élément pour mieux savoir son état
                     tweet = {tweet}
+                    onToggleLike = {onToggleLike}
                 />
             ))}
         </div>

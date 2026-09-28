@@ -255,6 +255,27 @@
   cursor: pointer;
 }
 
+.button-like {
+  display: flex;
+  margin-top: 10px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background: none;
+  color: red;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button-unlike {
+  display: flex;
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 20px;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
 .button:hover { /* quand la souris passe sur le bouton */
   text-decoration: underline;
 }
