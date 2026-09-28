@@ -51,7 +51,7 @@ Retour TD3 :
 
     - nouveaux apprentissages effectués : création d'un état partagé et le transmettre, création d'un formulaire contrôlé, création et utilisation d'un hook
 
-    - bonus réalisés : en cours
+    - bonus réalisés : message d'erreur, filtre par nom d'auteur, 
 
     - déclaration d'usage de l'IA :
         - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
