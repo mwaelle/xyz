@@ -14,9 +14,10 @@ export function TweetDetailsPage() { //page de détail d'un tweet
     const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
     const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
+    const title = tweet ? "Tweet de " + tweet.authorName : "Tweet introuvable"
+    useDocumentTitle(title)
 
     if (!tweet) {
-        useDocumentTitle("Tweet introuvable")
         return (
             <>
                 <p className="no-response">Ce tweet n'existe pas</p>
@@ -25,12 +26,11 @@ export function TweetDetailsPage() { //page de détail d'un tweet
         )
     }
 
-    useDocumentTitle("Tweet de " + tweet.authorName)
     return (
         <>
             <div className="fil-ariane">
                 <Link to={`/`}>Accueil</Link>
-                {getAncetres(tweet).map((ancetre) => ( //crée le fil d'Ariane à partir du tableau d'ancêtres
+                {getAncetres(tweet, tweets).map((ancetre) => ( //crée le fil d'Ariane à partir du tableau d'ancêtres
                     <>
                         {" / "}
                         <Link to={`/tweets/${ancetre.id}`}>
@@ -64,8 +64,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
     )
 }
 
-function getAncetres(tweet : Tweet | undefined) : Tweet[] { //fonction permettant de récupérer un tableau avec le fil d'Ariane d'un tweet
-    const { tweets } = useContext(TweetsContext)!;
+function getAncetres(tweet : Tweet | undefined, tweets: Tweet[]) : Tweet[] { //fonction permettant de récupérer un tableau avec le fil d'Ariane d'un tweet
     const ancetres : Tweet[] = []
     let tweetActuel = tweet
 
