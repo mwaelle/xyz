@@ -6,6 +6,7 @@ import { TweetPreview } from "../components/TweetPreview"
 import { TweetsList } from "../components/TweetsList"
 import type { Tweet } from "../types/Tweet"
 import { TweetsContext } from '../contexts/TweetsContext';
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 
 export function TweetDetailsPage() { //page de détail d'un tweet
@@ -15,6 +16,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
 
     if (!tweet) {
+        useDocumentTitle("Tweet introuvable")
         return (
             <>
                 <p className="no-response">Ce tweet n'existe pas</p>
@@ -23,6 +25,7 @@ export function TweetDetailsPage() { //page de détail d'un tweet
         )
     }
 
+    useDocumentTitle("Tweet de " + tweet.authorName)
     return (
         <>
             <div className="fil-ariane">
