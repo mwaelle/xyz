@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 
 import type { Tweet } from './types/Tweet';
+import type { TweetImage } from './types/TweetImage';
 import type { TweetsContextValue } from './contexts/TweetsContext';
 import { TweetsContext } from './contexts/TweetsContext';
 import { tweets } from './data/tweets';
@@ -12,12 +13,13 @@ function App() { //contenu de la page
 
     const [lesTweets, setTweets] = useState<Array<Tweet>>(tweets); //variable d'état qui stocke le tableau des tweets et une fonction pour mettre à jour la variable
 
-    function addTweet(content : string) : void { //ajoute un tweet dans le tableau
+    function addTweet(content : string, img? : TweetImage) : void { //ajoute un tweet dans le tableau
       const newTweet : Tweet = {
         id : crypto.randomUUID(),
         authorName : "Vous",
         authorHandle : "vous",
         content : content,
+        image : img,
         createdAt : new Date().toISOString(),
         likes : 0,
         likedByMe : false

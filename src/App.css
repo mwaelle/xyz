@@ -186,10 +186,12 @@
 
 /* Mes modifications */
 
+
 .app { /* concerne tout le contenu de ma page App */
   text-align: left;
   padding: 20px;
 }
+
 
 .header { /* concerne l'en-tête */
   display: flex;
@@ -214,6 +216,7 @@
   color: #51b1ce;
 }
 
+
 .tweet-filter { /* concerne le filtre */
   width: 100%;
   height: 50px;
@@ -224,12 +227,13 @@
   color: #000000;
   font: inherit;
   padding-left: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .tweet-number { /* concerne le nombre de tweets */
   padding-top: 10px;
 }
+
 
 .tweet-preview { /* concerne chaque tweet */
   position: relative;
@@ -268,6 +272,7 @@
   border-radius: 5%;
   margin-bottom: 3px;
 }
+
 
 .button { /* concerne le bouton pour étendre */
   margin-top: 12px;
@@ -311,6 +316,7 @@
   margin-top: 15px;
 }
 
+
 .fil-ariane { /* concerne le fil d'Ariane */
   display: block;
   margin-top: 15px;
@@ -320,6 +326,7 @@
 .fil-ariane a { /* concerne les liens dans le fil d'Ariane */
   color: #51b1ce;
 }
+
 
 .no-response { /* concerne les éléments indiquant qu'il n'y a pas de réponse */
   margin-top: 15px;
@@ -339,11 +346,59 @@
   padding-top: 10px;
 }
 
-.form-error {
+.form-label { /* concerne le label pour la case et le texte */
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox { /* concerne la case à cocher pour mettre une image */
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.form-checkbox:checked { /* concerne la case à cocher pour mettre une image si cochée */
+  background-color: #e52e62;
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-checkbox:checked::after { /* concerne la case à cocher pour mettre une image si cochée */
+    content: "✓";
+    color: white;
+    font-size: 15px;
+}
+
+.form-img { /* concerne les balises sur l'image */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-img-input { /* concerne les inputs sur les données de l'image */
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  color: #000000;
+  font: inherit;
+  padding-left: 10px;
+}
+
+.form-error { /* concerne l'affichage de l'erreur */
   color: #ff4370;
 }
 
-.form-foot { /* concerne ce qui est juste en dessous du formulaire */
+.form-foot { /* concerne ce qui est en dessous du formulaire */
   display: flex;
 }
 

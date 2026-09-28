@@ -1,9 +1,10 @@
 import { createContext } from "react"
 import type { Tweet } from "../types/Tweet"
+import type { TweetImage } from "../types/TweetImage"
 
 export type TweetsContextValue = {
     tweets: Array<Tweet>
-    addTweet: (content : string) => void
+    addTweet: (content : string, img? : TweetImage) => void
     toggleLike: (id : string) => void
 }
 

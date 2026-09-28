@@ -56,5 +56,6 @@ Retour TD3 :
     - déclaration d'usage de l'IA :
         - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
         - vérification du code écrit (confirmation du respect de la consigne)
-        - ?
+        - recherches de propriétés CSS adaptées à ce que je souhaitais faire
+        - 
         
