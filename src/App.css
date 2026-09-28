@@ -191,23 +191,18 @@
   padding: 20px;
 }
 
-.header {
+.header { /* concerne l'en-tête */
   display: flex;
   margin-bottom: 50px;
   margin-top: 10px;
 }
 
-.header div {
+.header div { /* concerne la balise div de l'en-tête contenant le logo et le titre */
   display: flex;
   margin-right: auto;
 }
 
-.header img {
-    width: 32px;
-    height: 32px;
-}
-
-.title {
+.title { /* concerne le titre de l'en-tête */
   font-weight: bold;
   color: #000000;
   font-size: 25px;
@@ -271,7 +266,7 @@
   cursor: pointer;
 }
 
-.button-like {
+.button-like { /* concerne le bouton si liké */
   display: flex;
   margin-top: 10px;
   border: 1px solid #e52e62;
@@ -282,7 +277,7 @@
   cursor: pointer;
 }
 
-.button-unlike {
+.button-unlike { /* concerne le bouton si pas liké */
   display: flex;
   margin-top: 10px;
   border: 1px solid #000000;
@@ -318,7 +313,7 @@
 }
 
 
-.form-textarea {
+.form-textarea { /* concerne le formulaire */
   width: 100%;
   height: 100px;
   box-sizing: border-box;
@@ -331,21 +326,21 @@
   padding-top: 10px;
 }
 
-.form-foot {
+.form-foot { /* concerne ce qui est juste en dessous du formulaire */
   display: flex;
 }
 
-.form-caracteres {
+.form-caracteres { /* concerne l'affichage du nombre de caractères restants */
   font-size: 14px;
 }
 
-.form-button {
+.form-button { /* concerne le bouton Publier si cliquable */
   margin-left: auto;
   background-color: white;
   color: #000000;
 }
 
-.form-button:disabled {
+.form-button:disabled { /* concerne le bouton Publier si pas cliquable */
   background-color: #e6e6e6;
   color: darkgray;
 }

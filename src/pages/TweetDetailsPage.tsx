@@ -14,10 +14,10 @@ export function TweetDetailsPage() { //page de détail d'un tweet
     const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
     const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
-    const title = tweet ? "Tweet de " + tweet.authorName : "Tweet introuvable"
-    useDocumentTitle(title)
+    const title = tweet ? "Tweet de " + tweet.authorName : "Tweet introuvable" //récupère le titre adéquat
+    useDocumentTitle(title) //hook pour le titre de la page
 
-    if (!tweet) {
+    if (!tweet) { //s'il n'y a pas de tweet correspondant à l'id
         return (
             <>
                 <p className="no-response">Ce tweet n'existe pas</p>

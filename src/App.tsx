@@ -10,9 +10,9 @@ import { tweets } from './data/tweets';
 
 function App() { //contenu de la page
 
-    const [lesTweets, setTweets] = useState<Array<Tweet>>(tweets);
+    const [lesTweets, setTweets] = useState<Array<Tweet>>(tweets); //variable d'état qui stocke le tableau des tweets et une fonction pour mettre à jour la variable
 
-    function addTweet(content : string) : void {
+    function addTweet(content : string) : void { //ajoute un tweet dans le tableau
       const newTweet : Tweet = {
         id : crypto.randomUUID(),
         authorName : "Vous",
@@ -25,7 +25,7 @@ function App() { //contenu de la page
       setTweets((lesTweets) => [newTweet, ...lesTweets])
     }
 
-    function toggleLike(id : string) : void {
+    function toggleLike(id : string) : void { //modifie le tableau de tweets suite à l'ajout ou l'enlèvement d'un like 
       setTweets((lesTweets) => 
         lesTweets.map((tweet) => 
           tweet.id === id

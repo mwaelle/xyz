@@ -31,7 +31,7 @@ Retour TD2 :
 
     - difficultés rencontrées : apprendre à utiliser Outlet et les routes, trouver les bonnes propriétés CSS, apprendre à utiliser les Link, création du fil d'Ariane quand le tweet est un tweet de réponse
 
-    - solutions appliquées : utilisation du cours, de MDN Web Docs et recherche d'exemples et d'explications sur Internet et par l'IA
+    - solutions appliquées : utilisation du cours 02, de MDN Web Docs et recherche d'exemples et d'explications sur Internet et par l'IA
 
     - nouveaux apprentissages effectués : Outlet et routes, Link
 
@@ -41,3 +41,20 @@ Retour TD2 :
         - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
         - vérification du code écrit (confirmation du respect de la consigne)
         - exemples et explications pour la création du fil d'Ariane
+
+
+Retour TD3 :
+
+    - difficultés rencontrées : apprendre à créer un état partagé et à le transmettre, trouver les bonnes propriétés CSS, apprendre à contrôler un formualire, apprendre à créer un hook
+
+    - solutions appliquées : utilisation du cours 02, de MDN Web Docs et recherche d'exemples et d'explications sur Internet et par l'IA
+
+    - nouveaux apprentissages effectués : création d'un état partagé et le transmettre, création d'un formulaire contrôlé, création et utilisation d'un hook
+
+    - bonus réalisés : en cours
+
+    - déclaration d'usage de l'IA :
+        - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
+        - vérification du code écrit (confirmation du respect de la consigne)
+        - ?
+        

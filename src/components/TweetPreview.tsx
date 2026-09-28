@@ -49,7 +49,7 @@ export function TweetPreview({tweet, linkToDetail = true, onToggleLike} : TweetP
             {(linkToDetail) && ( //si on est pas sur la page de détail du tweet, on a un lien vers la discussion
                 <Link className="tweet-link" to={`/tweets/${tweet.id}/`}>Voir la discussion</Link>
             )}
-        </div> //balise pour grouper des éléments sans laisser de trace
+        </div>
     )
 }
 

@@ -7,6 +7,6 @@ export type TweetsContextValue = {
     toggleLike: (id : string) => void
 }
 
-export const TweetsContext = createContext<TweetsContextValue | undefined> (
+export const TweetsContext = createContext<TweetsContextValue | undefined> ( //permet de faire remonter un état partagé
     undefined,
 )

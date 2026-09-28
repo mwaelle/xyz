@@ -7,10 +7,10 @@ import { useContext } from 'react';
 
 
 export function TweetsMasterPage() { //page avec le fil des tweets
-    useDocumentTitle("Accueil")
+    useDocumentTitle("Accueil") //hook pour le titre de la page
     const { tweets, addTweet, toggleLike } = useContext(TweetsContext)!;
     const tweetsTries = [...tweets].sort((a, b) => b.createdAt.localeCompare(a.createdAt)) //tableau des tweets triés du plus récent au plus ancien
-    const tweetsLikes = tweets.reduce((accumulateur, tweet) => {
+    const tweetsLikes = tweets.reduce((accumulateur, tweet) => { //fait la somme des likes de chaque tweet
         return accumulateur + tweet.likes
     }, 0)
     return (
