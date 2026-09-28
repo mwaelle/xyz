@@ -326,6 +326,10 @@
   padding-top: 10px;
 }
 
+.form-error {
+  color: #ff4370;
+}
+
 .form-foot { /* concerne ce qui est juste en dessous du formulaire */
   display: flex;
 }
