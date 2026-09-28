@@ -45,7 +45,7 @@ Retour TD2 :
 
 Retour TD3 :
 
-    - difficultés rencontrées : apprendre à créer un état partagé et à le transmettre, trouver les bonnes propriétés CSS, apprendre à contrôler un formualire, apprendre à créer un hook
+    - difficultés rencontrées : apprendre à créer un état partagé et à le transmettre, trouver les bonnes propriétés CSS, apprendre à contrôler un formualire, apprendre à créer un hook, utiliser les bonnes propriétés de balises, problème de syntaxe, comprendre comment utiliser la méthode reduce()
 
     - solutions appliquées : utilisation du cours 02, de MDN Web Docs et recherche d'exemples et d'explications sur Internet et par l'IA
 
@@ -55,7 +55,7 @@ Retour TD3 :
 
     - déclaration d'usage de l'IA :
         - recherche de la cause d'une erreur (code en rouge, page qui ne s'affiche pas)
-        - vérification du code écrit (confirmation du respect de la consigne)
+        - vérification du code écrit (confirmation du respect de la consigne, problème de syntaxe)
         - recherches de propriétés CSS adaptées à ce que je souhaitais faire
-        - 
+        - décomposer clairement en étapes logiques lorsqu'il faut réaliser plusieurs changements (notamment le dernier bonus du TD3) et faire valider le code écrit ensuite
         
