@@ -261,11 +261,6 @@
   font-size: 14px;
 }
 
-.tweet-header b { /* concerne le nom de l'auteur de chaque tweet */ 
-  font-size: 17px;
-  color: #000000;
-}
-
 .img { /* concerne les images associées aux tweets */
   max-height: 300px;
   object-fit: contain;
@@ -317,6 +312,13 @@
   display: block;
   color: #51b1ce;
   margin-top: 15px;
+}
+
+.tweet-link-author { /* concerne les liens dans le nom de l'auteur */
+  color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 

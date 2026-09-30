@@ -25,7 +25,7 @@ export function TweetPreview({tweet, linkToDetail = true, onToggleLike} : TweetP
         <div className="tweet-preview"> 
             <Avatar authorName = {tweet.authorName}/>
             <div>
-                <p className="tweet-header"><b>{tweet.authorName}</b> @{tweet.authorHandle} {jour} {mois(moisNb)} {annee} à {heures}:{minutes}</p>
+                <p className="tweet-header"><Link className="tweet-link-author" to={`/author/${tweet.authorHandle}/`}>{tweet.authorName}</Link> @{tweet.authorHandle} {jour} {mois(moisNb)} {annee} à {heures}:{minutes}</p>
 
                 {tweet.image && ( //vérifie si l'image est présente et l'affiche si c'est le cas
                     linkToDetail ? ( //si on est pas sur la page de détail, l'image est cliquable
