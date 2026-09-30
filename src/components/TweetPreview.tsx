@@ -38,7 +38,7 @@ export function TweetPreview({tweet, linkToDetail = true, onToggleLike} : TweetP
 
                 )}
 
-                <p>{newContent}</p>
+                <p className="tweet-content">{newContent}</p>
 
                 {tweet.content.length > 180 && ( //si le contenu est > 180 caractères, le bouton pour étendre est créé et le texte affiché change en fonction de l'état du contenu
                     <button className="button" onClick={() => setIsExpanded((isExpanded) => !isExpanded) }>{isExpanded ? "Voir moins" : "Voir plus"}</button>

@@ -273,6 +273,9 @@
   margin-bottom: 3px;
 }
 
+.tweet-content { /* concerne le contenu du tweet */
+  overflow-wrap: break-word;
+}
 
 .button { /* concerne le bouton pour étendre */
   margin-top: 12px;
