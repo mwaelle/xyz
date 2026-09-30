@@ -27,7 +27,6 @@ export function AuthorPage() { //page d'un auteur
         <>
             <TweetsList
                 tweets = {authorTweet}
-                linkToDetail = {false}
                 onToggleLike = {toggleLike}
             />
         </>

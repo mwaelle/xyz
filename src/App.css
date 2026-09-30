@@ -230,6 +230,27 @@
   margin-top: 30px;
 }
 
+
+.tweet-select { /* concerne les éléments liés au sélectionneur */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.tweet-select select { /* concerne le sélectionneur */
+  width: 50%;
+  height: 35px;
+  font: inherit;
+  background-color: white;
+  color: #000000;
+}
+
+.tweet-select p { /* concerne les réponses */
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+
 .tweet-number { /* concerne le nombre de tweets */
   padding-top: 10px;
 }
