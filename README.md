@@ -58,4 +58,8 @@ Retour TD3 :
         - vérification du code écrit (confirmation du respect de la consigne, problème de syntaxe)
         - recherches de propriétés CSS adaptées à ce que je souhaitais faire
         - décomposer clairement en étapes logiques lorsqu'il faut réaliser plusieurs changements (notamment le dernier bonus du TD3) et faire valider le code écrit ensuite
+
+
+Etape bonus :
+    - parcours réalisés : A
         

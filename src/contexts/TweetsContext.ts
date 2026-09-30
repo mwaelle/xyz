@@ -6,6 +6,7 @@ export type TweetsContextValue = {
     tweets: Array<Tweet>
     addTweet: (content : string, img? : TweetImage) => void
     toggleLike: (id : string) => void
+    addReply: (parentId: string, content: string, img? : TweetImage) => void
 }
 
 export const TweetsContext = createContext<TweetsContextValue | undefined> ( //permet de faire remonter un état partagé

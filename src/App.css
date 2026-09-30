@@ -195,7 +195,7 @@
 
 .header { /* concerne l'en-tête */
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 10px;
 }
 
@@ -330,6 +330,8 @@
 
 .no-response { /* concerne les éléments indiquant qu'il n'y a pas de réponse */
   margin-top: 15px;
+  color: #ff4370;
+  margin-bottom: 15px;
 }
 
 
@@ -342,6 +344,7 @@
   background-color: white;
   color: #000000;
   font: inherit;
+  margin-top: 20px;
   padding-left: 10px;
   padding-top: 10px;
 }

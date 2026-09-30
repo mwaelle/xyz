@@ -37,8 +37,23 @@ function App() { //contenu de la page
             : tweet
       ))
     }
+
+    function addReply(parentId : string, content : string, img? : TweetImage) : void { //ajoute un tweet de réponse dans le tableau
+      const newTweet : Tweet = {
+        id : crypto.randomUUID(),
+        authorName : "Vous",
+        authorHandle : "vous",
+        content : content,
+        image : img,
+        createdAt : new Date().toISOString(),
+        parentId : parentId,
+        likes : 0,
+        likedByMe : false
+      }
+      setTweets((lesTweets) => [newTweet, ...lesTweets])
+    }
     
-    const context: TweetsContextValue = { tweets : lesTweets, addTweet : addTweet, toggleLike : toggleLike };
+    const context: TweetsContextValue = { tweets : lesTweets, addTweet : addTweet, toggleLike : toggleLike, addReply : addReply };
 
 
     return (

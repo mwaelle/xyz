@@ -4,13 +4,14 @@ import { useContext } from 'react';
 
 import { TweetPreview } from "../components/TweetPreview"
 import { TweetsList } from "../components/TweetsList"
+import { TweetForm } from "../components/TweetForm";
 import type { Tweet } from "../types/Tweet"
 import { TweetsContext } from '../contexts/TweetsContext';
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 
 export function TweetDetailsPage() { //page de détail d'un tweet
-    const { tweets, toggleLike } = useContext(TweetsContext)!;
+    const { tweets, toggleLike, addReply } = useContext(TweetsContext)!;
     const { id } = useParams<{id : string}>() //récupère l'id en paramètre de l'URL
     const tweet = tweets.find((tweet) => tweet.id === id) //récupère le tweet de la page grâce à son id
     const tweetsResponse = tweets.filter((tweet) => tweet.parentId === id) //récupère les tweets de réponse
@@ -60,6 +61,8 @@ export function TweetDetailsPage() { //page de détail d'un tweet
             {tweetsResponse.length === 0 && ( //affiche le fait qu'il n'y ai pas de réponse
                 <p className="no-response">Aucune réponse pour le moment.</p>
             )}
+
+            <TweetForm onSubmit={(content, img) => addReply(tweet.id, content, img)}/>
         </>
     )
 }
