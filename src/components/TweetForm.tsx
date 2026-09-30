@@ -20,7 +20,7 @@ export function TweetForm({onSubmit} : TweetFormProps) : React.JSX.Element { //a
     const verifiedALT = alt.trim() !== "" //vérifie que le texte alternatif ne soit pas pas vide
 
 
-    const handleSubmit = (event : React.SyntheticEvent<HTMLFormElement>) : void => { //gestionnaire de soumission
+    const handleSubmit = (event : React.SubmitEvent<HTMLFormElement>) : void => { //gestionnaire de soumission
         event.preventDefault() //empêche le navigateur de charger un nouveau document afin que le code React traite l'action
         const newImg : TweetImage | undefined = //crée un nouveau TweetImage si la case est cochée sinon undefined
             checked ? {

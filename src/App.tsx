@@ -64,7 +64,8 @@ function App() { //contenu de la page
             <img src='/favicon-32x32.png' alt='logo de XYZ'/>
             <p className='title'>XYZ</p>
           </div>
-            <Link className="tweet-link-header" to={`/`}>Accueil</Link> 
+            <Link className="tweet-link-header" to={`/`}>Accueil</Link>
+            <Link className="tweet-link-header" to={`/likes`}>Tweets likés</Link>  
             <Link className="tweet-link-header" to={`/a-propos`}>A propos</Link>
         </header>
         <TweetsContext.Provider value={context}>

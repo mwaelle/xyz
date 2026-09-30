@@ -61,5 +61,5 @@ Retour TD3 :
 
 
 Etape bonus :
-    - parcours réalisés : A, B (réponses incluses)
+    - parcours réalisés : A, B (réponses incluses), C
         

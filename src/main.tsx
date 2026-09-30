@@ -8,6 +8,7 @@ import { TweetDetailsPage } from './pages/TweetDetailsPage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { AboutPage } from './pages/AboutPage.tsx'
 import { AuthorPage } from './pages/AuthorPage.tsx'
+import { LikedTweetsPage } from './pages/LikedTweetsPage.tsx'
 
 
 createRoot(document.getElementById('root')!).render( //routes
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render( //routes
       <Route path="a-propos" element={<AboutPage/>} />
       <Route path="tweets/:id" element={<TweetDetailsPage/>} />
       <Route path="author/:handle" element={<AuthorPage/>} />
+      <Route path="likes" element={<LikedTweetsPage/>} />
       <Route path="*" element={<NotFoundPage/>} />
       </Route>
     </Routes>

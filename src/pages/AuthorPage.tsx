@@ -25,10 +25,6 @@ export function AuthorPage() { //page d'un auteur
 
     return (
         <>
-            <div className="fil-ariane">
-                <Link to={`/`}>Accueil</Link> {" / "} Tweets de @{handle}
-            </div>
-
             <TweetsList
                 tweets = {authorTweet}
                 linkToDetail = {false}
